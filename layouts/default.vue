@@ -1,18 +1,24 @@
 <template lang='pug'>
-  v-app(class='v-app' align-start)
-    v-content
-      nuxt
+  nuxt
 
 </template>
 
 <script>
+import HeaderComponent from '@/components/Header'
+
 export default {
   data() {
     return {}
+  },
+  computed: {},
+  created() {},
+  components: {
+    HeaderComponent
   }
 }
 </script>
-<style lang="sass" scoped>
+
+<style lang="sass">
 @import '@/assets/styles/layouts/default.sass'
 
 </style>

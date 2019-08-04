@@ -1,5 +1,31 @@
 $primary-color: #F91C3D
 $secondary-color: #112D6F
-$pale-blue: #709be7
-$dark-blue: #0056b3
+$blue-lighten-1: #709be7
+$blue-darken-1: #0056b3
+$blue-darken-2: #0C255F
 
+$xs: 600px
+$sm: 960px
+$md: 1264px
+$lg: 1904px
+
+@mixin respond-to($media)
+  @if $media == xs
+    @media only screen and (max-width: $xs)
+      @content
+
+  @else if $media == sm
+    @media only screen and (max-width: $sm)
+      @content
+      
+  @else if $media == md
+    @media only screen and (max-width: $md)
+      @content
+
+  @else if $media == lg
+    @media only screen and (max-width: $lg)
+      @content
+
+  @else if $media == xl
+    @media only screen and (min-width: $lg+1)
+      @content
