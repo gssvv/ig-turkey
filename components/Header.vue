@@ -9,7 +9,7 @@
 
       .menu(v-if='!smAndDown')
         v-btn(to='/' rounded text) Home  
-        v-btn(rounded text) Discover  
+        v-btn(to='/login' rounded text) Discover  
 
       v-spacer
 
@@ -33,7 +33,7 @@ export default {
   props: {
     logoStyle: {
       type: String,
-      default: 'dark'
+      default: "dark"
     }
   },
   computed: {

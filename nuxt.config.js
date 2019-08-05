@@ -1,52 +1,52 @@
 export default {
-  mode: 'spa',
+  mode: "spa",
   /*
    ** Headers of the page
    */
   head: {
-    titleTemplate: '%s - ' + process.env.npm_package_name,
-    title: process.env.npm_package_name || '',
+    titleTemplate: "%s - " + process.env.npm_package_name,
+    title: process.env.npm_package_name || "",
     meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { charset: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
       {
-        hid: 'description',
-        name: 'description',
-        content: process.env.npm_package_description || ''
+        hid: "description",
+        name: "description",
+        content: process.env.npm_package_description || ""
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
   },
   router: {
-    middleware: 'i18n'
+    middleware: "i18n"
   },
   /*
    ** Customize the progress-bar color
    */
-  loading: { color: '#fff' },
+  loading: { color: "#fff" },
   /*
    ** Global CSS
    */
-  css: ['~/assets/styles/base.sass'],
+  css: ["~/assets/styles/base.sass"],
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~/plugins/i18n.js'],
+  plugins: ["~/plugins/i18n.js"],
   /*
    ** Nuxt.js dev-modules
    */
   devModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
-    '@nuxtjs/eslint-module',
-    '@nuxtjs/vuetify'
+    "@nuxtjs/eslint-module",
+    "@nuxtjs/vuetify"
   ],
   /*
    ** Nuxt.js modules
    */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios',
-    '@nuxtjs/pwa'
+    "@nuxtjs/axios",
+    "@nuxtjs/pwa"
   ],
   /*
    ** Axios module configuration
@@ -58,12 +58,12 @@ export default {
    ** https://github.com/nuxt-community/vuetify-module
    */
   vuetify: {
-    customVariables: ['~/assets/styles/variables.sass'],
+    customVariables: ["~/assets/styles/variables.sass"],
     theme: {
       themes: {
         light: {
-          primary: '#F91C3D',
-          secondary: '#112D6F'
+          primary: "#F91C3D",
+          secondary: "#112D6F"
           // accent: colors.grey.darken3,
           // info: colors.teal.lighten1,
           // warning: colors.amber.base,
