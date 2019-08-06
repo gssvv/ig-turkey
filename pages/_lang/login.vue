@@ -1,7 +1,4 @@
 <template lang='pug'>
-  v-app(align-start)
-    header-component(:logoStyle='`light`')
-
     v-content
       v-container(login-page fill-height column align-initial)
         v-layout.main-part.wrap
@@ -33,16 +30,18 @@
               v-btn(icon color='white' height='80' width='80')
                 v-icon(size='60') mdi-play
 
-    footer-component
-
 </template>
 
 <script>
-import HeaderComponent from '@/components/Header'
-import FooterComponent from '@/components/Footer'
+import HeaderComponent from "@/components/Header"
+import FooterComponent from "@/components/Footer"
 
 export default {
-  created() {},
+  created() {
+    this.$store.commit("styles/setHeaderLogoStyle", "light")
+    this.$store.commit("styles/setFooterBg", false)
+    this.$store.commit("styles/setAppClassName", "login-page")
+  },
   computed: {
     xs() {
       return this.$vuetify.breakpoint.xs
@@ -57,7 +56,7 @@ export default {
   }
 }
 </script>
-<style lang="sass">
+<style lang="sass" scoped>
 @import '@/assets/styles/pages/login.sass'
 @import '@/assets/styles/components/inputs.sass'
 </style>

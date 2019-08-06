@@ -18,7 +18,7 @@ export default {
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
   },
   router: {
-    middleware: "i18n"
+    middleware: ["i18n", "cleanStyles"]
   },
   /*
    ** Customize the progress-bar color

@@ -1,19 +1,32 @@
 <template lang='pug'>
-  nuxt
+
+  v-app(align-start :class='appClassName')
+    header-component
+
+    nuxt
+
+    footer-component
 
 </template>
 
 <script>
-import HeaderComponent from '@/components/Header'
+import HeaderComponent from "@/components/Header"
+import FooterComponent from "@/components/Footer"
+import { mapGetters } from "vuex"
 
 export default {
   data() {
     return {}
   },
-  computed: {},
   created() {},
+  computed: {
+    ...mapGetters({
+      appClassName: "styles/appClassName"
+    })
+  },
   components: {
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent
   }
 }
 </script>
